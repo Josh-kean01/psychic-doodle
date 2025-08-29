@@ -1,5 +1,4 @@
 // App.jsx
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -7,6 +6,8 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import FinalStep from "./FinalStep";
 import { FormProvider } from "./FormContext";
+import "./App.css";
+import logo from "./assets/logo.png";
 
 const App = () => {
   return (
@@ -15,12 +16,19 @@ const App = () => {
         {/* Fullscreen wrapper */}
         <div className="d-flex flex-column min-vh-100 bg-light w-100">
           {/* 🔹 Header that shows on all screens */}
-          <header className="bg-dark text-white py-3 px-4 shadow">
-            <h2 className="m-0">My Application Form</h2>
+          <header className="header text-white p-3 px-4 shadow">
+            <div className="d-flex flex-row">
+              <img src={logo} width={150} />
+
+              <div className="d-flex flex-column justify-content-center ">
+                <h3 className="mb-0"> OCEANSMITH.</h3>
+                <p className="mb-0 small">Job Hunt Made Easy</p>
+              </div>
+            </div>
           </header>
 
           {/* 🔹 Main content area, centered */}
-          <main className="flex-grow-1 d-flex justify-content-center align-items-start py-5">
+          <main className="flex-grow-1 d-flex justify-content-center align-items-start py-3 py-md-5 px-2">
             <div className="w-100" style={{ maxWidth: "900px" }}>
               <Routes>
                 <Route path="/" element={<Step1 />} />

@@ -25,67 +25,69 @@ const Step4 = () => {
     >
       <h2 className="mb-4">Step 4: Demographics & Messages</h2>
 
-      {/* Gender */}
-      <div className="mb-3">
-        <label className="form-label">Gender *</label>
-        <select
-          className="form-select"
-          {...register("gender", { required: "This field is required" })}
-        >
-          <option value="">Select</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="nonBinary">Non-binary</option>
-          <option value="preferNot">Prefer not to say</option>
-        </select>
-        {errors.gender && (
-          <div className="text-danger">{errors.gender.message}</div>
-        )}
-      </div>
+      <div className="row">
+        {/* Gender */}
+        <div className="col-md-6 mb-3">
+          <label className="form-label">Gender *</label>
+          <select
+            className="form-select"
+            {...register("gender", { required: "This field is required" })}
+          >
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonBinary">Non-binary</option>
+            <option value="preferNot">Prefer not to say</option>
+          </select>
+          {errors.gender && (
+            <div className="text-danger">{errors.gender.message}</div>
+          )}
+        </div>
 
-      {/* Hispanic/Latino */}
-      <div className="mb-3">
-        <label className="form-label">Are you Hispanic/Latino? *</label>
-        <select
-          className="form-select"
-          {...register("hispanicLatino", {
-            required: "This field is required",
-          })}
-        >
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-        {errors.hispanicLatino && (
-          <div className="text-danger">{errors.hispanicLatino.message}</div>
-        )}
-      </div>
+        {/* Hispanic/Latino */}
+        <div className="col-md-6 mb-3">
+          <label className="form-label">Are you Hispanic/Latino? *</label>
+          <select
+            className="form-select"
+            {...register("hispanicLatino", {
+              required: "This field is required",
+            })}
+          >
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          {errors.hispanicLatino && (
+            <div className="text-danger">{errors.hispanicLatino.message}</div>
+          )}
+        </div>
 
-      {/* Race */}
-      <div className="mb-3">
-        <label className="form-label">Race</label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="e.g., Asian"
-          {...register("race")}
-        />
-      </div>
+        {/* Race */}
+        <div className="col-md-6 mb-3">
+          <label className="form-label">Race</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="e.g., Asian"
+            {...register("race")}
+          />
+        </div>
 
-      {/* Veteran */}
-      <div className="mb-3">
-        <label className="form-label">Are you a Veteran? *</label>
-        <select
-          className="form-select"
-          {...register("veteran", { required: "This field is required" })}
-        >
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-        {errors.veteran && (
-          <div className="text-danger">{errors.veteran.message}</div>
-        )}
+        {/* Veteran */}
+        <div className="col-md-6 mb-3">
+          <label className="form-label">Are you a Veteran? *</label>
+          <select
+            className="form-select"
+            {...register("veteran", { required: "This field is required" })}
+          >
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          {errors.veteran && (
+            <div className="text-danger">{errors.veteran.message}</div>
+          )}
+        </div>
       </div>
 
       {/* Disability */}

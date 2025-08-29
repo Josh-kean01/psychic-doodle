@@ -25,30 +25,34 @@ const Step2 = () => {
     >
       <h2 className="mb-4">Step 2: Education</h2>
 
-      {/* Do you have a bachelor's degree? */}
-      <div className="mb-3">
-        <label className="form-label">Do you have a bachelor’s degree?</label>
-        <select
-          className="form-select"
-          {...register("hasBachelors", { required: "This field is required" })}
-        >
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-        {errors.hasBachelors && (
-          <div className="text-danger">{errors.hasBachelors.message}</div>
-        )}
-      </div>
+      <div className="row">
+        {/* Do you have a bachelor's degree? */}
+        <div className="col-md-4 mb-3">
+          <label className="form-label">Do you have a bachelor’s degree?</label>
+          <select
+            className="form-select "
+            {...register("hasBachelors", {
+              required: "This field is required",
+            })}
+          >
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          {errors.hasBachelors && (
+            <div className="text-danger">{errors.hasBachelors.message}</div>
+          )}
+        </div>
 
-      {/* University */}
-      <div className="mb-3">
-        <label className="form-label">University/College (Bachelor’s)</label>
-        <input
-          type="text"
-          className="form-control"
-          {...register("university")}
-        />
+        {/* University */}
+        <div className="col-md-8 mb-3">
+          <label className="form-label">University/College (Bachelor’s)</label>
+          <input
+            type="text"
+            className="form-control"
+            {...register("university")}
+          />
+        </div>
       </div>
 
       {/* Start / End Date */}
@@ -67,36 +71,43 @@ const Step2 = () => {
         </div>
       </div>
 
-      {/* CGPA */}
-      <div className="mb-3">
-        <label className="form-label">CGPA Bachelor’s</label>
-        <input type="text" className="form-control" {...register("cgpa")} />
-      </div>
+      <div className="row">
+        {/* CGPA */}
+        <div className="col-md-3">
+          <label className="form-label">CGPA Bachelor’s</label>
+          <input type="text" className="form-control" {...register("cgpa")} />
+        </div>
 
-      {/* Highest education level */}
-      <div className="mb-3">
-        <label className="form-label">Highest education level achieved *</label>
-        <select
-          className="form-select"
-          {...register("educationLevel", {
-            required: "This field is required",
-          })}
-        >
-          <option value="">Select</option>
-          <option value="bachelors">Bachelor’s</option>
-          <option value="masters">Master’s</option>
-          <option value="phd">PhD</option>
-          <option value="other">Other</option>
-        </select>
-        {errors.educationLevel && (
-          <div className="text-danger">{errors.educationLevel.message}</div>
-        )}
-      </div>
+        {/* Highest education level */}
+        <div className="col-md-4">
+          <label className="form-label">
+            Highest education level achieved *
+          </label>
+          <select
+            className="form-select"
+            {...register("educationLevel", {
+              required: "This field is required",
+            })}
+          >
+            <option selected value="bachelors">Bachelor’s</option>
+            <option value="masters">Master’s</option>
+            <option value="phd">PhD</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.educationLevel && (
+            <div className="text-danger">{errors.educationLevel.message}</div>
+          )}
+        </div>
 
-      {/* If other */}
-      <div className="mb-3">
-        <label className="form-label">If you chose 'Other', specify</label>
-        <input type="text" className="form-control" {...register("otherEdu")} />
+        {/* If other */}
+        <div className="col-md-5">
+          <label className="form-label">If you chose 'Other', specify</label>
+          <input
+            type="text"
+            className="form-control"
+            {...register("otherEdu")}
+          />
+        </div>
       </div>
 
       {/* Languages known */}

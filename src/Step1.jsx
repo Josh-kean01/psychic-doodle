@@ -358,7 +358,7 @@ const Step1 = () => {
 
         {/* Salary Flexibility */}
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-7 mb-3">
             <label className="form-label">
               If a company offers less than your expectation, can we apply? *
             </label>
@@ -379,7 +379,7 @@ const Step1 = () => {
               </div>
             )}
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-5 mb-3">
             <label className="form-label">If 'Other', please specify</label>
             <input
               {...register("otherSalaryNote")}
