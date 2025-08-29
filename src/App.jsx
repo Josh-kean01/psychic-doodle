@@ -1,5 +1,5 @@
 // App.jsx
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
@@ -16,9 +16,9 @@ const App = () => {
         {/* Fullscreen wrapper */}
         <div className="d-flex flex-column min-vh-100 bg-light w-100">
           {/* 🔹 Header that shows on all screens */}
-          <header className="header text-white p-3 px-4 shadow">
+          <header className="header text-white p-1 px-md-5 px-2 shadow">
             <div className="d-flex flex-row">
-              <img src={logo} width={150} />
+              <img src={logo} width={120} />
 
               <div className="d-flex flex-column justify-content-center ">
                 <h3 className="mb-0"> OCEANSMITH.</h3>
@@ -42,7 +42,16 @@ const App = () => {
 
           {/* 🔹 Footer (optional, appears everywhere) */}
           <footer className="bg-light text-center py-3 border-top">
-            <small>© {new Date().getFullYear()} My Company</small>
+            <small>
+              © {new Date().getFullYear()}{" "}
+              <Link
+                to="https://oceangrsmith.com"
+                className="text-decoration-none text-dark"
+              >
+                OCEANSMITH INC
+              </Link>
+              . All rights reserved.
+            </small>
           </footer>
         </div>
       </Router>

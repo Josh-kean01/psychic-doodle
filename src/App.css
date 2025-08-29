@@ -4,3 +4,8 @@
   background-size: cover;
   background-position: center;
 }
+
+.title {
+  font-variant: small-caps;
+  
+}
