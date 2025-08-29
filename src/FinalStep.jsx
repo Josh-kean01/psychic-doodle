@@ -145,10 +145,10 @@
 //       </div>
 
 //       <div className="row">
-//         {/* How did you hear about Oceangrsmith */}
+//         {/* How did you hear about Oceansmith */}
 //         <div className="col-md-6 mb-3">
 //           <label className="form-label">
-//             How did you hear about Oceangrsmith?
+//             How did you hear about Oceansmith?
 //           </label>
 //           <input
 //             type="text"
@@ -306,7 +306,7 @@ const FinalStep = () => {
       <div className="row">
         <div className="col-md-6 mb-3">
           <label className="form-label">
-            How did you hear about Oceangrsmith?
+            How did you hear about Oceansmith?
           </label>
           <input
             type="text"

@@ -128,7 +128,7 @@
 //       {/* Message to Job Hunt Specialist */}
 //       <div className="mb-3">
 //         <label className="form-label">
-//           Your message to the Oceangrsmith Job Hunt Specialist(s) *
+//           Your message to the Oceansmith Job Hunt Specialist(s) *
 //         </label>
 //         <textarea
 //           className="form-control"
@@ -265,7 +265,7 @@ const Step4 = () => {
       {/* Message to Job Hunt Specialist */}
       <div className="mb-3">
         <label className="form-label">
-          Your message to the Oceangrsmith Job Hunt Specialist(s)
+          Your message to the Oceansmith Job Hunt Specialist(s)
         </label>
         <textarea
           className="form-control"
